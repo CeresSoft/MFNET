@@ -7,3 +7,7 @@ NuGetにあったMediaFoundationパッケージのソースコードです
 
 ソースURL https://sourceforge.net/projects/mfnet/files/
 
+# 履歴
+
+## v3.1.1
+.NET8 対応
