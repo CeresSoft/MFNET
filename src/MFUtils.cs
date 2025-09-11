@@ -23,6 +23,12 @@ using System.Security;
 using MediaFoundation.Transform;
 using MediaFoundation.MFPlayer;
 
+//2025.09.11:CS)杉原:CLSCompliant対応 >>>>> ここから
+//----------
+// 旧AssemblyInfo.csに定義されていたものをこちらに移動
+[assembly: CLSCompliant(true)]
+//2025.09.11:CS)杉原:CLSCompliant対応 <<<<< ここまで
+
 namespace MediaFoundation
 {
     public enum HResult
@@ -2787,14 +2793,19 @@ namespace MediaFoundation.Misc
             this.HResult = hr;
         }
 
-        // This constructor is used for deserialization.
-        private MFException(
-            System.Runtime.Serialization.SerializationInfo info, 
-            System.Runtime.Serialization.StreamingContext context) :
-                base( info, context )
-        {
-        }
-        
+        //2025.09.11:CS)杉原:旧形式対応 >>>>> ここから
+        //// This constructor is used for deserialization.
+        //private MFException(
+        //    System.Runtime.Serialization.SerializationInfo info, 
+        //    System.Runtime.Serialization.StreamingContext context) :
+        //        base( info, context )
+        //{
+        //}
+        //----------
+        // 「すべての参照」で参照先を調べた所、
+        // 参照のないシンボルと表示されたのでコメントにします
+        //2025.09.11:CS)杉原:旧形式対応 <<<<< ここまで
+
         public override string Message
         {
             get
