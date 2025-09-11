@@ -1,4 +1,4 @@
-/* license
+﻿/* license
 
 MFUtils.cs - Part of MediaFoundationLib, which provide access to MediaFoundation interfaces via .NET
 
@@ -22,6 +22,18 @@ using System.Security;
 
 using MediaFoundation.Transform;
 using MediaFoundation.MFPlayer;
+
+//2025.09.11:CS)杉原:CLSCompliant対応 >>>>> ここから
+//----------
+// 旧AssemblyInfo.csに定義されていたものをこちらに移動
+[assembly: CLSCompliant(true)]
+//2025.09.11:CS)杉原:CLSCompliant対応 <<<<< ここまで
+
+//2025.09.11:CS)杉原:削除したAssemblyInfo.cs対応 >>>>> ここから
+//----------
+// 削除したAssemblyInfo.csを確認していたところ以下の定義があったので追加
+[assembly: ComVisible(false)]
+//2025.09.11:CS)杉原:削除したAssemblyInfo.cs対応 <<<<< ここまで
 
 namespace MediaFoundation
 {
@@ -2787,14 +2799,19 @@ namespace MediaFoundation.Misc
             this.HResult = hr;
         }
 
-        // This constructor is used for deserialization.
-        private MFException(
-            System.Runtime.Serialization.SerializationInfo info, 
-            System.Runtime.Serialization.StreamingContext context) :
-                base( info, context )
-        {
-        }
-        
+        //2025.09.11:CS)杉原:旧形式対応 >>>>> ここから
+        //// This constructor is used for deserialization.
+        //private MFException(
+        //    System.Runtime.Serialization.SerializationInfo info, 
+        //    System.Runtime.Serialization.StreamingContext context) :
+        //        base( info, context )
+        //{
+        //}
+        //----------
+        // 「すべての参照」で参照先を調べた所、
+        // 参照のないシンボルと表示されたのでコメントにします
+        //2025.09.11:CS)杉原:旧形式対応 <<<<< ここまで
+
         public override string Message
         {
             get
