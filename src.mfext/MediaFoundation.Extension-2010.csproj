@@ -6,8 +6,8 @@
     <AssemblyName>MediaFoundation.Extension</AssemblyName>
     <AssemblyTitle>MediaFoundation .Net Extension Library</AssemblyTitle>
     <Description>An extension assembly the MediaFoundation .Net Library. See http://mfnet.sourceforge.net/</Description>
-    <AssemblyVersion>1.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
     <Product>Release Version</Product>
     <Copyright>GNU Lesser General Public License v2.1 or BSD</Copyright>
   </PropertyGroup>
