@@ -63,7 +63,7 @@
     <Description>.NET Interfaces for calling MediaFoundation.  See http://mfnet.sourceforge.net/</Description>
     <AssemblyVersion>3.1.0</AssemblyVersion>
     <FileVersion>3.1.0.0</FileVersion>
-    <Product>Debug Version</Product>
+    <Product>Release Version</Product>
     <Copyright>GNU Lesser General Public License v2.1 or BSD</Copyright>
   </PropertyGroup>
 </Project>

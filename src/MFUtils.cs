@@ -29,6 +29,12 @@ using MediaFoundation.MFPlayer;
 [assembly: CLSCompliant(true)]
 //2025.09.11:CS)™Œ´:CLSCompliant‘Î‰ <<<<< ‚±‚±‚Ü‚Å
 
+//2025.09.11:CS)™Œ´:íœ‚µ‚½AssemblyInfo.cs‘Î‰ >>>>> ‚±‚±‚©‚ç
+//----------
+// íœ‚µ‚½AssemblyInfo.cs‚ğŠm”F‚µ‚Ä‚¢‚½‚Æ‚±‚ëˆÈ‰º‚Ì’è‹`‚ª‚ ‚Á‚½‚Ì‚Å’Ç‰Á
+[assembly: ComVisible(false)]
+//2025.09.11:CS)™Œ´:íœ‚µ‚½AssemblyInfo.cs‘Î‰ <<<<< ‚±‚±‚Ü‚Å
+
 namespace MediaFoundation
 {
     public enum HResult
