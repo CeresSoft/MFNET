@@ -60,10 +60,21 @@
   </ItemGroup>
   <PropertyGroup>
     <AssemblyTitle>MediaFoundation .Net Library</AssemblyTitle>
-    <Description>.NET Interfaces for calling MediaFoundation.  See http://mfnet.sourceforge.net/</Description>
+    <Description>.NET Interfaces for calling MediaFoundation.  See http://mfnet.sourceforge.net/
+.NET8 Build by CeresSoft</Description>
     <AssemblyVersion>3.1.1</AssemblyVersion>
     <FileVersion>3.1.0.0</FileVersion>
     <Product>Release Version</Product>
     <Copyright>GNU Lesser General Public License v2.1 or BSD</Copyright>
+    <Title>MediaFoundation.NET</Title>
+    <Authors>CeresSoft</Authors>
+    <Company>CeresSoft</Company>
+    <RepositoryUrl>https://github.com/CeresSoft/MFNET</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/CeresSoft/MFNET</PackageProjectUrl>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageReleaseNotes>MediaFoundation .NET8 compatible</PackageReleaseNotes>
+    <PackageTags>MediaFoundation</PackageTags>
+    <Version>3.1.1</Version>
+    <PackageId>$(AssemblyName).NET</PackageId>
   </PropertyGroup>
 </Project>
