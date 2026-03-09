@@ -12,22 +12,35 @@ jobs:
       id-token: write # OIDCトークン発行のために必要
     runs-on: ubuntu-24.04
     steps:
+    # チェックアウト
     - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+    
     # ビルド & パック 基本
     - name: dotnet pack Base
-      run: dotnet pack ./src/MediaFoundation-2010.sln -c Release -p:TargetFramework=net8.0-windows -o ./bin
+      run: dotnet pack ./src/MediaFoundation-2010.sln -c Release -p:TargetFramework=net8.0-windows -o ./bin-base
 
     # ビルド & パック 拡張
     - name: dotnet pack Extension
-      run: dotnet pack ./src.mfext/MediaFoundation.Extension-2010.sln -c Release -p:TargetFramework=net8.0-windows -o ./bin
+      run: dotnet pack ./src.mfext/MediaFoundation.Extension-2010.sln -c Release -p:TargetFramework=net8.0-windows -o ./bin-extension
 
-    # NuGet/loginアクションでOIDCトークンを使って短命トークンを取得
-    - name: NuGet Login
+    # NuGet/loginアクションでOIDCトークンを使って短命トークンを取得 1回目
+    - name: NuGet Login 1
       uses: NuGet/login@d22cc5f58ff5b88bf9bd452535b4335137e24544 # v1.0.0
-      id: login
+      id: login1
       with:
         user: CeresSoft # NuGetのユーザー名を指定、Orgアカウントでもユーザー名となる
 
-    # 取得した短命トークンを使ってビルドした複数パッケージを公開
+    # 取得した短命トークンを使ってビルドした基本パッケージを公開
     - name: Push package Base
-      run: dotnet nuget push ./bin/*.nupkg --api-key "${{ steps.login.outputs.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ./bin-base/*.nupkg --api-key "${{ steps.login1.outputs.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json
+
+    # NuGet/loginアクションでOIDCトークンを使って短命トークンを取得 2回目
+    - name: NuGet Login 2
+      uses: NuGet/login@d22cc5f58ff5b88bf9bd452535b4335137e24544 # v1.0.0
+      id: login2
+      with:
+        user: CeresSoft # NuGetのユーザー名を指定、Orgアカウントでもユーザー名となる
+
+    # 取得した短命トークンを使ってビルドした拡張パッケージを公開
+    - name: Push package Extension
+      run: dotnet nuget push ./bin-extension/*.nupkg --api-key "${{ steps.login2.outputs.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json
