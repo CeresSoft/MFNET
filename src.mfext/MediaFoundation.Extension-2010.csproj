@@ -7,20 +7,21 @@
     <AssemblyTitle>MediaFoundation .Net Extension Library</AssemblyTitle>
     <Description>An extension assembly the MediaFoundation .Net Library. See http://mfnet.sourceforge.net/
 .NET8 Build by CeresSoft</Description>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
+    <AssemblyVersion>3.1.2</AssemblyVersion>
+    <FileVersion>3.1.2.0</FileVersion>
     <Product>Release Version</Product>
     <Copyright>GNU Lesser General Public License v2.1 or BSD</Copyright>
-    <PackageId>$(AssemblyName).NET</PackageId>
-    <Title>MediaFoundation.Extension.NET</Title>
-    <Version>1.0.1</Version>
+    <PackageId>CS.$(AssemblyName)</PackageId>
+    <Title>CeresSoft MediaFoundation Extension</Title>
+    <Version>3.1.1</Version>
     <Authors>CeresSoft</Authors>
     <Company>CeresSoft</Company>
     <PackageProjectUrl>https://github.com/CeresSoft/MFNET</PackageProjectUrl>
     <RepositoryUrl>https://github.com/CeresSoft/MFNET</RepositoryUrl>
-    <PackageTags>MediaFoundation</PackageTags>
-    <PackageReleaseNotes>MediaFoundation .NET8 compatible</PackageReleaseNotes>
+    <PackageTags>MediaFoundation;MFNET</PackageTags>
+    <PackageReleaseNotes>MediaFoundation Extension .NET8 compatible</PackageReleaseNotes>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DefineConstants>TRACE;DEBUG</DefineConstants>
@@ -38,5 +39,11 @@
   <ItemGroup>
     <Compile Remove="IMFByteStreamTimeSeekExtensions.cs" />
     <Compile Remove="IMFSeekInfoExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 </Project>
