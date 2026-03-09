@@ -58,23 +58,30 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
   <PropertyGroup>
     <AssemblyTitle>MediaFoundation .Net Library</AssemblyTitle>
     <Description>.NET Interfaces for calling MediaFoundation.  See http://mfnet.sourceforge.net/
 .NET8 Build by CeresSoft</Description>
     <AssemblyVersion>3.1.1</AssemblyVersion>
-    <FileVersion>3.1.0.0</FileVersion>
+    <FileVersion>3.1.1.0</FileVersion>
     <Product>Release Version</Product>
     <Copyright>GNU Lesser General Public License v2.1 or BSD</Copyright>
-    <Title>MediaFoundation.NET</Title>
+    <Title>CeresSoft MediaFoundation</Title>
     <Authors>CeresSoft</Authors>
     <Company>CeresSoft</Company>
     <RepositoryUrl>https://github.com/CeresSoft/MFNET</RepositoryUrl>
     <PackageProjectUrl>https://github.com/CeresSoft/MFNET</PackageProjectUrl>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <PackageReleaseNotes>MediaFoundation .NET8 compatible</PackageReleaseNotes>
-    <PackageTags>MediaFoundation</PackageTags>
+    <PackageTags>MediaFoundation;MFNET</PackageTags>
     <Version>3.1.1</Version>
-    <PackageId>$(AssemblyName).NET</PackageId>
+    <PackageId>CS.$(AssemblyName)</PackageId>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 </Project>
