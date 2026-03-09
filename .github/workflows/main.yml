@@ -17,11 +17,11 @@ jobs:
     
     # ビルド & パック 基本
     - name: dotnet build Base
-      run: dotnet build ./src/MediaFoundation-2010.sln -c Release
+      run: dotnet build ./src/MediaFoundation-2010.sln -c Release -p:TargetFramework=net8.0-windows
 
     # ビルド & パック 拡張
     - name: dotnet build Extension
-      run: dotnet build ./src.mfext/MediaFoundation.Extension-2010.sln -c Release
+      run: dotnet build ./src.mfext/MediaFoundation.Extension-2010.sln -c Release -p:TargetFramework=net8.0-windows
 
     # NuGet/loginアクションでOIDCトークンを使って短命トークンを取得 1回目
     - name: NuGet Login 1
