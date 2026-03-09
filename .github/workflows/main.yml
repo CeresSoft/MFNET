@@ -16,12 +16,12 @@ jobs:
     - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
     
     # ビルド & パック 基本
-    - name: dotnet pack Base
-      run: dotnet pack ./src/MediaFoundation-2010.sln -c Release
+    - name: dotnet build Base
+      run: dotnet build ./src/MediaFoundation-2010.sln -c Release
 
     # ビルド & パック 拡張
-    - name: dotnet pack Extension
-      run: dotnet pack ./src.mfext/MediaFoundation.Extension-2010.sln -c Release
+    - name: dotnet build Extension
+      run: dotnet build ./src.mfext/MediaFoundation.Extension-2010.sln -c Release
 
     # NuGet/loginアクションでOIDCトークンを使って短命トークンを取得 1回目
     - name: NuGet Login 1
