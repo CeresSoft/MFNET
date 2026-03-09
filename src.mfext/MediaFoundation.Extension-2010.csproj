@@ -5,11 +5,22 @@
     <RootNamespace>MediaFoundation</RootNamespace>
     <AssemblyName>MediaFoundation.Extension</AssemblyName>
     <AssemblyTitle>MediaFoundation .Net Extension Library</AssemblyTitle>
-    <Description>An extension assembly the MediaFoundation .Net Library. See http://mfnet.sourceforge.net/</Description>
+    <Description>An extension assembly the MediaFoundation .Net Library. See http://mfnet.sourceforge.net/
+.NET8 Build by CeresSoft</Description>
     <AssemblyVersion>1.0.1</AssemblyVersion>
     <FileVersion>1.0.1.0</FileVersion>
     <Product>Release Version</Product>
     <Copyright>GNU Lesser General Public License v2.1 or BSD</Copyright>
+    <PackageId>$(AssemblyName).NET</PackageId>
+    <Title>MediaFoundation.Extension.NET</Title>
+    <Version>1.0.1</Version>
+    <Authors>CeresSoft</Authors>
+    <Company>CeresSoft</Company>
+    <PackageProjectUrl>https://github.com/CeresSoft/MFNET</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/CeresSoft/MFNET</RepositoryUrl>
+    <PackageTags>MediaFoundation</PackageTags>
+    <PackageReleaseNotes>MediaFoundation .NET8 compatible</PackageReleaseNotes>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DefineConstants>TRACE;DEBUG</DefineConstants>
