@@ -17,11 +17,11 @@ jobs:
     
     # ビルド & パック 基本
     - name: dotnet pack Base
-      run: dotnet pack ./src/MediaFoundation-2010.sln -c Release -p:TargetFramework=net8.0-windows -o ./bin-base
+      run: dotnet pack ./src/MediaFoundation-2010.sln -c Release
 
     # ビルド & パック 拡張
     - name: dotnet pack Extension
-      run: dotnet pack ./src.mfext/MediaFoundation.Extension-2010.sln -c Release -p:TargetFramework=net8.0-windows -o ./bin-extension
+      run: dotnet pack ./src.mfext/MediaFoundation.Extension-2010.sln -c Release
 
     # NuGet/loginアクションでOIDCトークンを使って短命トークンを取得 1回目
     - name: NuGet Login 1
@@ -32,7 +32,7 @@ jobs:
 
     # 取得した短命トークンを使ってビルドした基本パッケージを公開
     - name: Push package Base
-      run: dotnet nuget push ./bin-base/*.nupkg --api-key "${{ steps.login1.outputs.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ./src/bin/Release/*.nupkg --api-key "${{ steps.login1.outputs.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json
 
     # NuGet/loginアクションでOIDCトークンを使って短命トークンを取得 2回目
     - name: NuGet Login 2
@@ -43,4 +43,4 @@ jobs:
 
     # 取得した短命トークンを使ってビルドした拡張パッケージを公開
     - name: Push package Extension
-      run: dotnet nuget push ./bin-extension/*.nupkg --api-key "${{ steps.login2.outputs.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ./src.mfext/bin/Release/*.nupkg --api-key "${{ steps.login2.outputs.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json
