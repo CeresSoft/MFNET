@@ -71,7 +71,7 @@
     <Company>CeresSoft</Company>
     <RepositoryUrl>https://github.com/CeresSoft/MFNET</RepositoryUrl>
     <PackageProjectUrl>https://github.com/CeresSoft/MFNET</PackageProjectUrl>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <PackageReleaseNotes>MediaFoundation .NET8 compatible</PackageReleaseNotes>
     <PackageTags>MediaFoundation</PackageTags>
     <Version>3.1.1</Version>
