@@ -72,16 +72,16 @@
     <FileVersion>3.1.2.0</FileVersion>
     <Product>Release Version</Product>
     <Copyright>GNU Lesser General Public License v2.1 or BSD</Copyright>
-    <Title>CeresSoft MediaFoundation</Title>
+    <Title>MediaFoundation By CeresSoft</Title>
     <Authors>CeresSoft</Authors>
     <Company>CeresSoft</Company>
     <RepositoryUrl>https://github.com/CeresSoft/MFNET</RepositoryUrl>
     <PackageProjectUrl>https://github.com/CeresSoft/MFNET</PackageProjectUrl>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageReleaseNotes>MediaFoundation .NET8 compatible</PackageReleaseNotes>
     <PackageTags>MediaFoundation;MFNET</PackageTags>
-    <Version>3.1.1</Version>
-    <PackageId>CS.$(AssemblyName)</PackageId>
+    <Version>$(AssemblyVersion)</Version>
+    <PackageId>CeresSoft.$(AssemblyName)</PackageId>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 </Project>

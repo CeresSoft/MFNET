@@ -11,16 +11,16 @@
     <FileVersion>3.1.2.0</FileVersion>
     <Product>Release Version</Product>
     <Copyright>GNU Lesser General Public License v2.1 or BSD</Copyright>
-    <PackageId>CS.$(AssemblyName)</PackageId>
-    <Title>CeresSoft MediaFoundation Extension</Title>
-    <Version>3.1.1</Version>
+    <PackageId>CeresSoft.$(AssemblyName)</PackageId>
+    <Title>MediaFoundation Extension By CeresSoft</Title>
+    <Version>$(AssemblyVersion)</Version>
     <Authors>CeresSoft</Authors>
     <Company>CeresSoft</Company>
     <PackageProjectUrl>https://github.com/CeresSoft/MFNET</PackageProjectUrl>
     <RepositoryUrl>https://github.com/CeresSoft/MFNET</RepositoryUrl>
     <PackageTags>MediaFoundation;MFNET</PackageTags>
     <PackageReleaseNotes>MediaFoundation Extension .NET8 compatible</PackageReleaseNotes>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
