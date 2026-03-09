@@ -20,7 +20,7 @@
     <RepositoryUrl>https://github.com/CeresSoft/MFNET</RepositoryUrl>
     <PackageTags>MediaFoundation</PackageTags>
     <PackageReleaseNotes>MediaFoundation .NET8 compatible</PackageReleaseNotes>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DefineConstants>TRACE;DEBUG</DefineConstants>
